@@ -1,0 +1,120 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html,body {
+    background: #000000;
+    color: #FFFFFF;
+    font-family: monospace;
+    font-size: 14px;
+    line-height: 16px;
+}
+a {
+    color: #00CC00;
+}
+h3 {
+    margin: 0px;
+}
+.terminal .clipboard {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0.01;
+    filter: alpha(opacity = 0.01);
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0.01);
+    width: 2px;
+}
+.cmd > .clipboard {
+    position: fixed;
+}
+.terminal {
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.cmd {
+    padding: 0;
+    margin: 0;
+    height: 1.3em;
+}
+.terminal .terminal-output div {
+    display: block;
+}
+.terminal, .terminal .terminal-output, .terminal .terminal-output div,
+.terminal .terminal-output div div, .cmd, .terminal .cmd span, .terminal .cmd div {
+    font-size: 14px;
+    line-height: 16px;
+}
+.terminal .cmd span {
+    float: left;
+}
+.terminal .cmd span.inverted {
+    background-color: #aaa;
+    color: #000;
+}
+.terminal div::-moz-selection, .terminal span::-moz-selection {
+    background-color: #aaa;
+    color: #000;
+}
+.terminal div::selection, .terminal span::selection {
+    background-color: #aaa;
+    color: #000;
+}
+.terminal .terminal-output div.error, .terminal .terminal-output div.error div {
+    color: red;
+}
+.tilda {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1100;
+}
+.clear {
+    clear: both;
+}
+#dialog {
+    background-color: #FFFFFF;
+    border: 1px dotted #777777;
+    color: #555555;
+    display: none;
+    position: absolute;
+    z-index: 10001;
+}
+#dialog .header {
+    background-color: #22aa99;
+    font-size: 16px;
+    padding: 2px;
+    width: 100%;
+}
+#dialog .header span {
+    color: #d9d9d9;
+    margin: 0px 0 0 4px;
+    vertical-align: middle;
+}
+#dialog .header img {
+    margin: 3px;
+    vertical-align: middle;
+}
+#dialog #dialog-close {
+    cursor: pointer;
+}
+#dialog div.content {
+    border-top: 1px dotted #777777;
+    color: #000000;
+    padding: 10px;
+}
+#dialog div.content h2 {
+    margin: 0 0 6px 0;
+}
+#modalblanket {
+    display: none;
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 10000;
+}
