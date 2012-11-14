@@ -134,7 +134,7 @@ var Portfolio = {
       'link' : 'http://www.fancychatter.com',
       'image' : 'fancychatter.jpg',
       'role' : 'Developer',
-      'technologies' : 'PHP, MySQL, Javascript (jQuery), CSS3, HTML',
+      'technologies' : 'PHP, MySQL, Javascript (jQuery, jQuery Mobile), PhoneGap, CSS3, HTML',
       'synopsis' : ''
     },
     {
