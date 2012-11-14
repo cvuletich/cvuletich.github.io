@@ -139,7 +139,7 @@ var Portfolio = {
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'Javascript (jQuery), CSS3, HTML',
       'synopsis' : ''
-    },
+    }
   ],
   Next : function() {
     Portfolio.Index++;
