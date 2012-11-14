@@ -35,8 +35,12 @@ var Dialog = {
 var Portfolio = {
   Index : 0,
   Load : function() {
+    var link = '';
     $('#portfolio-image').html('<img src="img/portfolio/' + Portfolio.Pages[Portfolio.Index].image + '" />');
-    $('#portfolio-project').html(Portfolio.Pages[Portfolio.Index].project);
+    if (Portfolio.Pages[Portfolio.Index].link) {
+      link = '<span class="portfolio-link"> (<a href="' + Portfolio.Pages[Portfolio.Index].link + '" target="_blank">Link</a>)</span>';
+    }
+    $('#portfolio-project').html(Portfolio.Pages[Portfolio.Index].project + link);
     $('#portfolio-technologies').html('<strong>Technologies: </strong> ' + Portfolio.Pages[Portfolio.Index].technologies);
     $('#portfolio-role').html('<strong>Role: </strong> ' + Portfolio.Pages[Portfolio.Index].role);
     $('#portfolio-synopsis').html('<strong>Synopsis:</strong>' + Portfolio.Pages[Portfolio.Index].synopsis);
@@ -58,6 +62,7 @@ var Portfolio = {
     },
     {
       'project' : 'VW Bluetooth Checker',
+      'link' : 'http://web.vw.com/bluetoothchecker/',
       'image' : 'vwbluetooth.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'PHP, Javascript, CSS3, HTML',
@@ -65,6 +70,7 @@ var Portfolio = {
     },
     {
       'project' : 'Kenworth PartsInsider',
+      'link' : 'http://www.kenworthpartsinsider.com',
       'image' : 'kenworthpartsinsider.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'Tomcat/JSP, Mssql, Javascript (jQuery), CSS3, HTML',
@@ -72,6 +78,7 @@ var Portfolio = {
     },
     {
       'project' : 'Peterbilt PartsInsider',
+      'link' : 'http://www.peterbiltpartsinsider.com',
       'image' : 'peterbiltpartsinsider.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'Tomcat/JSP, Mssql, Javascript (jQuery), CSS3, HTML',
@@ -79,6 +86,7 @@ var Portfolio = {
     },
     {
       'project' : 'TRP Parts',
+      'link' : 'http://www.trpparts.com',
       'image' : 'trp.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'PHP (Drupal), Javascript, CSS3, HTML',
@@ -86,6 +94,7 @@ var Portfolio = {
     },
     {
       'project' : 'TRP Parts Mobile',
+      'link' : 'http://m.trpparts.com',
       'image' : 'trpmobile.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'PHP (Drupal), Javascript (jQuery, jQuery Mobile), CSS3, HTML',
@@ -100,6 +109,7 @@ var Portfolio = {
     },
     {
       'project' : 'Cox Hattery\'s Press Site',
+      'link' : 'http://cox.draftfcb.net/press',
       'image' : 'coxpress.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'Javascript (jQuery), CSS3, HTML',
@@ -121,6 +131,7 @@ var Portfolio = {
     },
     {
       'project' : 'FancyChatter (side project)',
+      'link' : 'http://www.fancychatter.com',
       'image' : 'fancychatter.jpg',
       'role' : 'Developer',
       'technologies' : 'PHP, MySQL, Javascript (jQuery), CSS3, HTML',
@@ -135,6 +146,7 @@ var Portfolio = {
     },
     {
       'project' : 'Soundbar (open source)',
+      'link' : 'https://github.com/cvuletich/soundbar',
       'image' : 'soundbar.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'Javascript (jQuery), CSS3, HTML',
@@ -196,16 +208,13 @@ $(document).ready(function(){
         } else if (scommand[0] === 'help') {
             term.echo('\n' +
                 '   blog         view my blog\n' +
-                '   ping         contact me\n' +
+                '   ping         email me\n' +
                 '   git          view my github account\n' +
                 '   portfolio    view my portfolio\n' +
                 '   resume       download my resume\n' +
                 '   who          about me\n');
         }else if (scommand[0] === 'ping') {
-            term.echo('\n' + 
-                '   Email: cvuletich@gmail.com\n' +
-                '   Phone: (708) 721-7212\n' +
-                '   Twitter: @cvuletich\n\n');
+            document.location = 'mailto:cvuletich@gmail.com';
         } else if (scommand[0] === 'portfolio') {
             $('#dialog .header .content').html('Portfolio');
             $('#dialog div.content').html('<div id="portfolio-project"></div><div id="portfolio-image"></div><div id="portfolio-previous" onclick="Portfolio.Previous()">&laquo; Prev</div><div id="portfolio-next" onclick="Portfolio.Next()">Next &raquo;</div><div id="portfolio-role"></div><div id="portfolio-technologies"></div><div id="portfolio-synopsis"></div>');
