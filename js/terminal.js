@@ -130,6 +130,13 @@ var Portfolio = {
       'synopsis' : ''
     },
     {
+      'project' : 'FuturesBoard.com',
+      'image' : 'futuresboard.jpg',
+      'role' : 'Managing Directory/Developer',
+      'technologies' : 'PHP, MySQL, Javascript, CSS, HTML',
+      'synopsis' : ''
+    },
+    {
       'project' : 'FancyChatter (side project)',
       'link' : 'http://www.fancychatter.com',
       'image' : 'fancychatter.jpg',
