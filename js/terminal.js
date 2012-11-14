@@ -221,7 +221,7 @@ $(document).ready(function(){
             Portfolio.Load();
             Dialog.Open(650, 600, 'center', 'center')
         }else if (scommand[0] === 'resume') {
-            term.echo('');
+            term.echo('cvsh: résumé coming soon');
         } else if (
             scommand[0] === 'cd' || 
             scommand[0] === 'chmod' || 
