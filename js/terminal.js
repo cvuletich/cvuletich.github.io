@@ -234,9 +234,7 @@ $(document).ready(function(){
         }else if (scommand[0] === 'who') {
             term.echo('\n' + 
                 '   Email: cvuletich@gmail.com\n' +
-                '   LinkedIn: (<a href="http://www.linkedin.com/profile/view?id=14219944" target="_blank">Link</a>)\n' +
-                '   Google+: (<a href="https://plus.google.com/112175147650443826014/posts" target="_blank">Link</a>)\n' +
-                '   Twitter: <a href="https://twitter.com/#!/cvuletich" cvuletichtarget="_blank">@cvuletich</a>\n\n');
+                '   Twitter: @cvuletich\n\n');
         } else {
             term.echo("cvsh: command not found: " + scommand[0]);
         }
