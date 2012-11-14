@@ -130,9 +130,9 @@ var Portfolio = {
       'synopsis' : ''
     },
     {
-      'project' : 'FuturesBoard.com',
+      'project' : 'FuturesBoard.com (side project)',
       'image' : 'futuresboard.jpg',
-      'role' : 'Managing Directory/Developer',
+      'role' : 'Managing Director/Developer',
       'technologies' : 'PHP, MySQL, Javascript, CSS, HTML',
       'synopsis' : ''
     },
