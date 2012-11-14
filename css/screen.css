@@ -108,6 +108,32 @@ h3 {
 #dialog div.content h2 {
     margin: 0 0 6px 0;
 }
+#dialog #portfolio-project {
+  font-size: 20px;
+  font-weight: bold;
+}
+#dialog #portfolio-image {
+  height: 330px;
+  margin: 5px;
+  overflow: hidden;
+  text-align: center;
+  width: 600px;
+}
+#dialog #portfolio-previous {
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  font-weight: bold;
+}
+#dialog #portfolio-next {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  font-weight: bold;
+}
+#dialog #portfolio-role {
+  margin-top: 40px;
+}
 #modalblanket {
     display: none;
     height: 100%;
