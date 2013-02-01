@@ -43,14 +43,29 @@ var Portfolio = {
     $('#portfolio-project').html(Portfolio.Pages[Portfolio.Index].project + link);
     $('#portfolio-technologies').html('<strong>Technologies: </strong> ' + Portfolio.Pages[Portfolio.Index].technologies);
     $('#portfolio-role').html('<strong>Role: </strong> ' + Portfolio.Pages[Portfolio.Index].role);
-    $('#portfolio-synopsis').html('<strong>Synopsis:</strong>' + Portfolio.Pages[Portfolio.Index].synopsis);
+    $('#portfolio-synopsis').html('<strong>Synopsis:</strong> ' + Portfolio.Pages[Portfolio.Index].synopsis);
   },
   Pages : [
+    {
+      'project' : 'BogsFootwear',
+      'image' : 'bogs.jpg',
+      'role' : 'Freelance',
+      'technologies' : 'PHP (plus PayPal express checkout and fulfillment APIs), MySQL, JavasScript (jQuery), CSS3, HTML',
+      'synopsis' : 'Built a custom shopping cart complete with an admin area for uploading and modifying inventory.  It also interacts with a fulfillment API so users can view previous orders as well as track shipments.'
+    },
     {
       'project' : 'DFCB Pulse',
       'image' : 'pulse.jpg',
       'role' : 'Senior Developer @ DraftFCB',
       'technologies' : 'Python (Facebook, Twitter, Instagram, Flickr APIs), PHP, MySQL, JavaScript (jQuery), CSS3, HTML',
+      'synopsis' : ''
+    },
+    {
+      'project' : 'Kikkoman USA - Chinese New Year',
+      'link' : 'http://www.kikkomanusa.com/cny',
+      'image' : 'kikkoman.jpg',
+      'role' : 'Senior Developer @ DraftFCB',
+      'technologies' : 'PHP, JavaScript (jQuery), CSS3, HTML',
       'synopsis' : ''
     },
     {
