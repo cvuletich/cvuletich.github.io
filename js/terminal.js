@@ -244,7 +244,7 @@ $(document).ready(function(){
             Portfolio.Load();
             Dialog.Open(650, 600, 'center', 'center')
         }else if (scommand[0] === 'opensesame') {
-            document.location = 'http://www.youtube.com/watch?v=8N_tupPBtWQ#t=0m11s';
+            $('#opensesame').html('<embed src="swf/mahna.swf" height="0" width="0"></embed>');
         }else if (scommand[0] === 'resume') {
             term.echo('cvsh: résumé coming soon');
         } else if (
