@@ -48,6 +48,7 @@ var Portfolio = {
   Pages : [
     {
       'project' : 'BogsFootwear',
+      'link' : 'http://www.bogsfootwear.ru',
       'image' : 'bogs.jpg',
       'role' : 'Freelance',
       'technologies' : 'PHP (plus PayPal express checkout and fulfillment APIs), MySQL, JavasScript (jQuery), CSS3, HTML',
@@ -242,6 +243,8 @@ $(document).ready(function(){
             $('#dialog div.content').html('<div id="portfolio-project"></div><div id="portfolio-image"></div><div id="portfolio-previous" onclick="Portfolio.Previous()">&laquo; Prev</div><div id="portfolio-next" onclick="Portfolio.Next()">Next &raquo;</div><div id="portfolio-role"></div><div id="portfolio-technologies"></div><div id="portfolio-synopsis"></div>');
             Portfolio.Load();
             Dialog.Open(650, 600, 'center', 'center')
+        }else if (scommand[0] === 'opensesame') {
+            document.location = 'http://www.youtube.com/watch?v=8N_tupPBtWQ#t=0m11s';
         }else if (scommand[0] === 'resume') {
             term.echo('cvsh: résumé coming soon');
         } else if (
