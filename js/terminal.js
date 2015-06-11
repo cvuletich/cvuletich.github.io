@@ -250,7 +250,8 @@ $(document).ready(function(){
         }else if (scommand[0] === 'opensesame') {
             $('#opensesame').html('<embed src="swf/mahna.swf" height="0" width="0"></embed>');
         }else if (scommand[0] === 'resume') {
-            term.echo('cvsh: résumé coming soon');
+            term.echo('cvsh: downloading...');
+            window.open('/pdf/resume.pdf', '_blank');
         }else if (scommand[0] === 'time') {
             window.open('http://isitfuckingfiveoclock.com', '_blank');
         } else if (
