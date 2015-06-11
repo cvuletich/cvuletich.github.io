@@ -227,15 +227,19 @@ $(document).ready(function(){
         } else if (scommand[0] === 'clear' || scommand[0] === 'cl') {
             $('#terminal').html();
         }else if (scommand[0] === 'git') {
-            document.location = 'http://www.github.com/cvuletich';
+            window.open('http://www.github.com/cvuletich', '_blank');
         } else if (scommand[0] === 'help') {
             term.echo('\n' +
                 '   blog         view my blog\n' +
-                '   ping         email me\n' +
                 '   git          view my github account\n' +
+                '   locate       am I on vacation?\n' +
+                '   ping         email me\n' +
                 '   portfolio    view my portfolio\n' +
                 '   resume       download my resume\n' +
+                '   time         is it five o\'clock yet?\n' +
                 '   who          about me\n');
+        }else if (scommand[0] === 'locate') {
+            window.open('http://ischrisonvacation.com', '_blank');
         }else if (scommand[0] === 'ping') {
             document.location = 'mailto:cvuletich@gmail.com';
         } else if (scommand[0] === 'portfolio') {
@@ -247,6 +251,8 @@ $(document).ready(function(){
             $('#opensesame').html('<embed src="swf/mahna.swf" height="0" width="0"></embed>');
         }else if (scommand[0] === 'resume') {
             term.echo('cvsh: résumé coming soon');
+        }else if (scommand[0] === 'time') {
+            window.open('http://isitfuckingfiveoclock.com', '_blank');
         } else if (
             scommand[0] === 'cd' || 
             scommand[0] === 'chmod' || 
